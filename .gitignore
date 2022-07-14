@@ -1,0 +1,7 @@
+**/.packages
+**/.dart_tool
+**/.vscode
+**/.idea
+**/out
+**/tmp
+**/__pycache__
