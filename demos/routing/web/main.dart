@@ -7,7 +7,11 @@ void main() {
   runApp(
     app: RadApp(child: RootPage()),
     appTargetId: 'output',
-    debugOptions: DebugOptions.developmentMode,
+    debugOptions: DebugOptions.productionMode,
+    routerOptions: RouterOptions(
+      path: '/demos/routing',
+      enableHashBasedRouting: true,
+    ),
   );
 }
 
