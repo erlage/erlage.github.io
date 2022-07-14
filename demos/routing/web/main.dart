@@ -62,20 +62,18 @@ class _RootPageState extends State<RootPage> {
   }
 
   Widget _headerItem({required String routeName, required String text}) {
-    return GestureDetector(
-      onTap: () => _navigatorState?.open(name: routeName),
-      child: Division(
-        style: 'width: 100px; padding: 15px;',
-        classAttribute: _activeRoute == routeName ? 'active' : '',
-        children: [
-          Division(
-            style: 'margin: 0 auto;',
-            children: [
-              Text(text),
-            ],
-          ),
-        ],
-      ),
+    return Division(
+      onClick: (_) => _navigatorState?.open(name: routeName),
+      style: 'width: 100px; padding: 15px;',
+      classAttribute: _activeRoute == routeName ? 'active' : '',
+      children: [
+        Division(
+          style: 'margin: 0 auto;',
+          children: [
+            Text(text),
+          ],
+        ),
+      ],
     );
   }
 

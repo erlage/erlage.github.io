@@ -60,20 +60,16 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   Widget _headerItem({required String routeName, required String text}) {
-    return GestureDetector(
-      onTap: () {
-        _navigatorState?.open(name: routeName);
-      },
-      child: Division(
-        style: 'widht: 100%;',
-        classAttribute: _activeRoute == routeName ? 'active' : '',
-        children: [
-          Division(
-            style: 'padding: 15px;',
-            innerText: text,
-          ),
-        ],
-      ),
+    return Division(
+      onClick: (_) => _navigatorState?.open(name: routeName),
+      style: 'widht: 100%;',
+      classAttribute: _activeRoute == routeName ? 'active' : '',
+      children: [
+        Division(
+          style: 'padding: 15px;',
+          innerText: text,
+        ),
+      ],
     );
   }
 
