@@ -5,5 +5,5 @@
 **/out
 **/tmp
 **/__pycache__
-**/main.dart.js.deps
-**/main.dart.js.map
+**/*js.deps
+**/*js.map
